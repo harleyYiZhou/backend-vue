@@ -14,6 +14,9 @@ export default {
 			active: 0
 		}
 	},
+	mounted() {
+		this.$i18n.locale = this.language
+	},
 	methods: {
 		goNext() {
 			if (this.active === 2) {

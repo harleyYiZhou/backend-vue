@@ -3,7 +3,7 @@ const app = {
         token: localStorage.getItem('token') || '',
         storeId: localStorage.getItem('storeId') || '',
         profile: JSON.parse(localStorage.getItem('profile')) || {},
-
+        language: localStorage.getItem('language')||'en'
     },
     mutations: {
         SET_TOKEN: (state, token) => {
@@ -18,6 +18,10 @@ const app = {
             state.profile = profile
             localStorage.setItem('profile', JSON.stringify(profile));
         },
+        SET_LANGUAGE: (state, language) => {
+            state.language = language
+            localStorage.setItem('language', language)
+        }
     },
     actions: {
         setToken({ commit }, token) {
@@ -28,6 +32,9 @@ const app = {
         },
         setProfile({ commit }, profile) {
             commit('SET_PROFILE', profile)
+        },
+        setLanguage({ commit }, language) {
+            commit('SET_LANGUAGE', language)
         },
     }
 }

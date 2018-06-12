@@ -5,18 +5,23 @@ import store from '../store'
 Vue.use(Router)
 const routes = [{
         path: '/',
-        redirect: '/storeSel',
+        redirect: '/select-store',
     }, {
         path: '/login',
         name: 'login',
         component: () =>
             import ('@/components/login')
     }, {
-        path: '/storeSel',
-        name: 'storeSel',
+        path: '/select-store',
+        name: 'select-store',
         component: () =>
             import ('@/components/storeSel')
-    }, {
+    },{
+        path: '/dashboard',
+        name: 'dashboard',
+        component:()=>
+            import ('@/components/dashboard')
+    },{
         path: '/verifyBusiness',
         name: 'verifyBusiness',
         redirect: '/verifyBusiness/step1',
@@ -71,7 +76,7 @@ const router = new Router({
 
 
 router.beforeEach((to, from, next) => {
-    if (store.getters.token) {
+    if (localStorage.getItem('token')) {
         if (to.path === '/login') {
             next({ path: '/' })
         } else {

@@ -58,6 +58,7 @@ export default {
 			}
 		},
 		handleLogin() {
+      var that=this;
 			let obj = {
 				login: this.loginForm.username,
 				password: this.loginForm.password,
@@ -68,7 +69,10 @@ export default {
 				this.$store.dispatch('setToken', res.data.accessToken);
 				this.$router.push({ path: '/' })
 			}).catch(err => {
-				console.log(err);
+        console.log(err);
+        if(err){
+          that.$message(err.data.message);
+        }
 			})
 		}
 	},

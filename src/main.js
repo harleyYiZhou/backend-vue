@@ -11,8 +11,15 @@ import '@/mixin'
 
 import store from '@/store'
 
+import i18n from '@/lang' //intetnationalization
+
 Vue.use(ElementUI);
 import { router } from './router'
+
+Vue.use(ElementUI,{
+    size:'mediun',
+    i18n: (key, value) => i18n.t(key, value)
+})
 
 Vue.config.productionTip = false
 
@@ -21,6 +28,7 @@ new Vue({
     el: '#app',
     store,
     router,
+    i18n,
     components: { App },
     template: '<App/>'
 })
