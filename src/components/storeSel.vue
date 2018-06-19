@@ -94,7 +94,7 @@ export default {
       console.log(row);
 
       this.$store.dispatch("setStoreId", row._id).then(() => {
-        this.$router.push({ path: "/dashboard" });
+        this.$router.push({ path: "/home" });
       });
 		},
 		logout: function() {

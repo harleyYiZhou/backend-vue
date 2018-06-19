@@ -56,7 +56,8 @@ export function doGet(url, params) {
     const href = getFullUrl(url, params)
     return request({
         url: href,
-        method: 'get'
+        method: 'get',
+        // headers: { 'X-Guzzu-Access-Token': localStorage.getItem('token') }
     })
 }
 

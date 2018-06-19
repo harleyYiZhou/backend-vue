@@ -1,5 +1,5 @@
 <template>
-	<div>
+	<div id="app">
 		<router-view />
 	</div>
 </template>
@@ -7,7 +7,8 @@
 <script>
 export default {
 	name: 'App',
-	mounted() {
+	created() {
+		this.$i18n.locale = localStorage.getItem('language')
 	},
 	data() {
 		return {
@@ -15,7 +16,7 @@ export default {
 		}
 	},
 	mounted() {
-		this.$i18n.locale = this.language
+		this.$i18n.locale = localStorage.getItem('language')
 	},
 	methods: {
 		goNext() {
@@ -46,6 +47,7 @@ export default {
 </script>
 
 <style lang="scss" >
+@import '/css/spacing.css';
 .step {
   margin-bottom: 40px;
 }
@@ -56,5 +58,15 @@ export default {
     cursor: pointer;
     font-size: 26px;
   }
+}
+html{
+	height: 100%;
+}
+body{
+	height: 100%;
+}
+#app{
+	height: 100%;
+	background: #fafafa;
 }
 </style>

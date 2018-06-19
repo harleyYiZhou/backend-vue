@@ -1,4 +1,7 @@
+import enLocale from 'element-ui/lib/locale/lang/en'
+
 export default {
+  ...enLocale,
   BTN_NAVGROUP: 'Nav Bar',
   BTN_BANNER: 'Banner',
   BTN_PRODUCTGROUP: 'Products',
@@ -185,6 +188,56 @@ export default {
   LOGIN_LOGIN_AGAIN: 'Login Again',
   LOGIN_BACK: 'Back',
   LOGIN_CONFIRM: 'Confirm',
-  LOGIN_SIGN_IN: 'Sign In'
+  LOGIN_SIGN_IN: 'Sign In',
 
+  // router
+  REPORT:'Report',
+
+  //dashboard-主页
+  BILLING: 'BILLING',
+  LANGUAGE: 'LANGUAGE',
+  ACCOUNT: 'ACCOUNT',
+  LOGOUT: 'Logout',
+
+  //Report-报表
+  STATISTICS:'Statistics',
+  ORDER_STATISTICS_FORM: 'Order Statistics',
+  SALESTABLE:'Sales table',
+  CHART: 'Chart',
+  NEWUSERCOUNT:'New User Count',
+  NEWSTORECOUNT:'New Store Count',
+  FROM: 'from',
+  TO: 'to',
+  PICKDATE: 'Pick date',
+  TOTALPAID: 'TotalPaid',
+  PAID: 'Paid',
+  DATE:'Date',
+  NUM:'Amount',
+  NULL: 'Null',
+  ORDERCOUNTPAID: 'Order Count Paid',
+  ORDERTOTALPAID: 'Order Total Paid',
+  ORDERCOUNTREFUNDED: 'Order Count Refunded',
+  ORDERTOTALREFUNDED: 'Order Total Refunded',
+  NEWSTORENAME: 'New Store Names',
+  WITHDRAWALREQUESTTOTALREQUESTED: 'Withdrawal Request Total Requested',
+
+  //Orders-订单
+  ORDER_TITLE: 'Orders',
+  ORDER_NUMBER: 'ORDER#',
+  ORDER_TYPE: 'TYPE',
+  ORDER_CREATETIME: 'CREATED AT',
+  ORDER_RECLPIENT: 'RECIPENT',
+  ORDER_STATUS: 'ORDER STATUS',
+  ORDER_PAYMENT_STATUS: 'PAYMENT STATUS',
+  ORDER_SHIPPING_STATUS: 'SHIPPING STATUS',
+  ORDER_TOTAL_COST: 'TOTAL COST',
+  ORDER_OPERATE: 'OPERATE',
+  ORDER_CHECK: 'check',
+
+  //Order-detail 订单详情
+  ORDER_DETAIL_MORE: 'More',
+  ORDER_DETAIL_OPEN: 'open',
+  ORDER_DETAIL_CLOSE: 'close',
+  ORDER_DETAIL_SHIP: 'ship',
+  ORDER_DETAIL_UNSHIP: 'unship',
 }

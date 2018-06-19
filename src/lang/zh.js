@@ -1,4 +1,7 @@
+import elementZhLocale from 'element-ui/lib/locale/lang/zh-CN' 
+
 export default {
+  ...elementZhLocale,
   BTN_NAVGROUP: '导航栏',
   BTN_BANNER: '横幅',
   BTN_PRODUCTGROUP: '商品列表',
@@ -186,6 +189,56 @@ export default {
   LOGIN_LOGIN_AGAIN: '重新登录',
   LOGIN_BACK: '返回',
   LOGIN_CONFIRM: '确定',
-  LOGIN_SIGN_IN: '登录'
+  LOGIN_SIGN_IN: '登录',
 
+  // router
+  REPORT:'报表',
+
+  //dashboard-主页
+  BILLING: '账单',
+  LANGUAGE: '语言',
+  ACCOUNT: '账户',
+  LOGOUT: '登出',
+
+  //Report-报表
+  STATISTICS:'统计',
+  ORDER_STATISTICS_FORM: '订单统计表',
+  CHART: '图表',
+  NEWUSERCOUNT:'新增用户表',
+  NEWSTORECOUNT:'新增商铺表',
+  SALESTABLE:'销售额表',
+  FROM: '从',
+  TO: '至',
+  PICKDATE: '选择日期',
+  TOTALPAID: '销售额',
+  PAID: '销售额',
+  DATE:'日期',
+  NUM:'数量/个',
+  NULL: '无',
+  ORDERCOUNTPAID: '支付订单总数',
+  ORDERTOTALPAID: '支付订单总额',
+  ORDERCOUNTREFUNDED: '退款订单总数',
+  ORDERTOTALREFUNDED: '退款总额',
+  NEWSTORENAME: '新增店铺名字',
+  WITHDRAWALREQUESTTOTALREQUESTED: '请求提款次数',
+
+  //Orders-订单
+  ORDER_TITLE: '订单',
+  ORDER_NUMBER: '订单号#',
+  ORDER_TYPE: '类型',
+  ORDER_CREATETIME: '创建时间',
+  ORDER_RECLPIENT: '收件人',
+  ORDER_STATUS: '订单状态',
+  ORDER_PAYMENT_STATUS: '支付状态',
+  ORDER_SHIPPING_STATUS: '运送状态',
+  ORDER_TOTAL_COST: '总金额',
+  ORDER_OPERATE: '操作',
+  ORDER_CHECK: '查看',
+
+  //Order-detail 订单详情
+  ORDER_DETAIL_MORE: '更多',
+  ORDER_DETAIL_OPEN: '进行中',
+  ORDER_DETAIL_CLOSE: '已取消',
+  ORDER_DETAIL_SHIP: '已配送',
+  ORDER_DETAIL_UNSHIP: '未配送',
 }

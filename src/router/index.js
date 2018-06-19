@@ -20,7 +20,115 @@ const routes = [{
         path: '/dashboard',
         name: 'dashboard',
         component:()=>
-            import ('@/components/dashboard')
+            import ('@/components/dashboard'),
+        children: [
+            {
+                path: '/home',
+                name: {
+                    en: 'Home',
+                    zh: '主页'
+                },
+                icon: 'el-icon-document',
+                component: () =>
+                    import('@/components/dashboard/home'),
+                show: true
+            },
+            {
+                path: '/order',
+                name: {
+                    en: 'Orders',
+                    zh: '订单'
+                },
+                icon: 'el-icon-document',
+                component: () =>
+                    import('@/components/dashboard/orders'),
+                show: true
+            },
+            {
+                path: '/products',
+                name: {
+                    en: 'Products',
+                    zh: '商品'
+                },
+                icon: 'el-icon-goods',
+                component: () =>
+                    import('@/components/dashboard/products'),
+                show: true
+            },
+            {
+                path: '/design',
+                name: {
+                    en: 'Design',
+                    zh: '设计'
+                },
+                icon: 'el-icon-document',
+                component: () =>
+                    import('@/components/dashboard/design'),
+                show: true
+            },
+            {
+                path: '/money',
+                name: {
+                    en: 'Money',
+                    zh: '资金'
+                },
+                icon: 'el-icon-document',
+                component: () =>
+                    import('@/components/dashboard/money'),
+                show: true
+            },
+            {
+                path: '/report',
+                name: {
+                    en: 'Reports',
+                    zh: '统计报告'
+                },
+                icon: 'el-icon-document',
+                component: () =>
+                    import('@/components/dashboard/reports'),
+                show: true
+            },
+            {
+                path: '/customer',
+                name: {
+                    en: 'Customers',
+                    zh: '客户'
+                },
+                icon: 'el-icon-document',
+                component: () =>
+                    import('@/components/dashboard/customers'),
+                show: true
+            },
+            {
+                path: '/app',
+                name: {
+                    en: 'Apps',
+                    zh: '扩展应用'
+                },
+                icon: 'el-icon-document',
+                component: () =>
+                    import('@/components/dashboard/app'),
+                show: true
+            },
+            {
+                path: '/setting',
+                name: {
+                    en: 'Settings',
+                    zh: '设置'
+                },
+                icon: 'el-icon-setting',
+                component: () =>
+                    import('@/components/dashboard/settings'),
+                show: true
+            },
+            {
+                path: '/order/orderDetail',
+                component: () =>
+                    import('@/components/order/order-detail'),
+                show: false
+            }
+        ],
+        hidden: true
     },{
         path: '/verifyBusiness',
         name: 'verifyBusiness',
