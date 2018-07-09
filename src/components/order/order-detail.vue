@@ -16,7 +16,7 @@
         </el-col>
       </el-row>
     </div>
-    <div class="mt-4 mx-4">
+    <div class="mt-4 mx-4" >
       <el-row>
         <el-col :span="16" class="height">
           <div class="mx-2 p-3 bg-white">
@@ -114,13 +114,35 @@
               <div>{{orderDetail.shippingAddress.customOrderFields}}</div>
             </div>
           </div>
-          <div class="height">
+          <div class="mx-2 bg-white" style="height: 400px;">
 
           </div>
         </el-col>
       </el-row>
     </div>
+    <div class="p-4 px-5">
+      <h5>时间表</h5>
+      <ul>
+        <li class="mt-2" v-for="(log,index) in orderDetail.log" :key="index">
+          <div class="color">{{setTime(log.timestamp)}}</div>
+          <div >{{log.type}}</div>
+        </li>
+      </ul>
+    </div>
+    <div class="mx-5 m-4">
+      <el-row>
+        <el-col :span="12">
+          <span>支付方式：</span>
+          <div></div>
+        </el-col>
+        <el-col :span="12">
+          <span>状态：</span>
+          <div></div>
+        </el-col>
+      </el-row>
+    </div>
   </div>
+  
 </template>
 
 <script>
@@ -192,6 +214,9 @@ img {
 }
 .status{
   font-size: 18px;
+  color: #6f6f6f;
+}
+.color{
   color: #6f6f6f;
 }
 </style>
